@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832787741EAE25300008667F /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 832787731EAE25300008667F /* AppSettings.m */; };
+		832787771EAE2CD60008667F /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832787761EAE2CD60008667F /* MainNavigationController.m */; };
 		83A734F11EADEEF400E42738 /* FlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A734F01EADEEF400E42738 /* FlowController.m */; };
 		83A734F51EADF8C100E42738 /* AccountSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A734F41EADF8C100E42738 /* AccountSelectionViewController.m */; };
 		83A734F91EAE058B00E42738 /* NSFileManager+DigiCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A734F81EAE058B00E42738 /* NSFileManager+DigiCloud.m */; };
@@ -18,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		832787701EAE1D050008667F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Digi Cloud/Constants.h"; sourceTree = "<group>"; };
+		832787721EAE25300008667F /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
+		832787731EAE25300008667F /* AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettings.m; sourceTree = "<group>"; };
+		832787751EAE2CD60008667F /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		832787761EAE2CD60008667F /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		83A734F01EADEEF400E42738 /* FlowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowController.m; sourceTree = "<group>"; };
 		83A734F21EADEF0800E42738 /* FlowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowController.h; sourceTree = "<group>"; };
 		83A734F31EADF8C100E42738 /* AccountSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSelectionViewController.h; sourceTree = "<group>"; };
@@ -84,8 +90,12 @@
 			children = (
 				83A8E85F1EADE76700F2D121 /* AppDelegate.h */,
 				83A8E8601EADE76700F2D121 /* AppDelegate.m */,
-				83A734F01EADEEF400E42738 /* FlowController.m */,
+				832787721EAE25300008667F /* AppSettings.h */,
+				832787731EAE25300008667F /* AppSettings.m */,
 				83A734F21EADEF0800E42738 /* FlowController.h */,
+				83A734F01EADEEF400E42738 /* FlowController.m */,
+				832787751EAE2CD60008667F /* MainNavigationController.h */,
+				832787761EAE2CD60008667F /* MainNavigationController.m */,
 				832787711EAE1DBB0008667F /* Categories */,
 				83A734F61EADFA5E00E42738 /* Accounts */,
 				83A8E8681EADE76700F2D121 /* Assets.xcassets */,
@@ -177,7 +187,9 @@
 			files = (
 				83A734F11EADEEF400E42738 /* FlowController.m in Sources */,
 				83A8E8611EADE76700F2D121 /* AppDelegate.m in Sources */,
+				832787741EAE25300008667F /* AppSettings.m in Sources */,
 				83A734F91EAE058B00E42738 /* NSFileManager+DigiCloud.m in Sources */,
+				832787771EAE2CD60008667F /* MainNavigationController.m in Sources */,
 				83A734F51EADF8C100E42738 /* AccountSelectionViewController.m in Sources */,
 				83A8E85E1EADE76700F2D121 /* main.m in Sources */,
 			);

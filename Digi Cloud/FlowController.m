@@ -7,9 +7,9 @@
 //
 
 #import "FlowController.h"
-#import "AccountSelectionViewController.h"
 
 @interface FlowController ()
+
 @end
 
 @implementation FlowController
@@ -24,11 +24,19 @@
 }
 
 - (UIViewController *) rootController {
-    return [self createAccountSelectionController];
+    if ([AppSettings hasRunBefore]) {
+        return [self createMainNavigationController];
+    } else {
+        return [self createAccountSelectionController];
+    }
 }
 
 - (UIViewController *) createAccountSelectionController {
     return [[AccountSelectionViewController alloc] init];
+}
+
+- (UIViewController *) createMainNavigationController {
+    return [[MainNavigationController alloc] init];
 }
 
 @end

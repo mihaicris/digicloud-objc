@@ -8,6 +8,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppSettings.h"
+#import "AccountSelectionViewController.h"
+#import "MainNavigationController.h"
 
 @interface FlowController: NSObject
 
@@ -16,5 +19,6 @@
 - (instancetype) initWithWindow:(UIWindow *) window;
 - (UIViewController *) rootController;
 - (UIViewController *) createAccountSelectionController;
+- (UIViewController *) createMainNavigationController;
 
 @end
