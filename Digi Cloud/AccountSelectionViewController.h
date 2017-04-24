@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^Block)(void);
+
 @interface AccountSelectionViewController : UIViewController
+
+@property (nonatomic, copy, nullable) Block onFinish;
 
 @end

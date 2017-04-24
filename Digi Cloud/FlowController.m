@@ -32,11 +32,25 @@
 }
 
 - (UIViewController *) createAccountSelectionController {
-    return [[AccountSelectionViewController alloc] init];
+    
+    AccountSelectionViewController *controller = [[AccountSelectionViewController alloc] init];
+    
+    controller.onFinish = ^{
+        __weak typeof(self) weakSelf = self;
+        [[weakSelf window] setRootViewController: [weakSelf rootController]];
+    };
+    
+    return controller;
 }
 
 - (UIViewController *) createMainNavigationController {
-    return [[MainNavigationController alloc] init];
-}
+    MainNavigationController *controller = [[MainNavigationController alloc] init];
+    
+    controller.onFinish = ^{
+        __weak typeof(self) weakSelf = self;
+        [[weakSelf window] setRootViewController: [weakSelf rootController]];
+    };
+    
+    return controller;}
 
 @end

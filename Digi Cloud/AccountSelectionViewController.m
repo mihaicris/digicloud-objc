@@ -15,8 +15,8 @@
 @implementation AccountSelectionViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
     self.view.backgroundColor = [UIColor greenColor];
+    [super viewDidLoad];
 }
 
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^Block)(void);
+
 @interface MainNavigationController : UINavigationController
+
+@property (nonatomic, copy, nullable) Block onFinish;
 
 @end
