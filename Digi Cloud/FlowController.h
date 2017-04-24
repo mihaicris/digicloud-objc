@@ -1,5 +1,6 @@
+
 //
-//  AppDelegate.h
+//  FlowController.h
 //  Digi Cloud
 //
 //  Created by Mihai Cristescu on 24/04/2017.
@@ -7,14 +8,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FlowController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface FlowController: NSObject
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) FlowController *flowController;
 
-- (void)createWorkingFolders;
+- (instancetype) initWithWindow:(UIWindow *) window;
+- (UIViewController *) rootController;
+- (UIViewController *) createAccountSelectionController;
 
 @end
-

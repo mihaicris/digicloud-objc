@@ -6,6 +6,8 @@
 //  Copyright © 2017 Mihai Cristescu. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import "NSFileManager+DigiCloud.h"
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -16,8 +18,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    // Get a window
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    self.window = [[UIWindow alloc] initWithFrame: bounds];
+    
+    // Init flow manager
+    self.flowController = [[FlowController alloc] initWithWindow: [self window]];
+    
+    // Create working folders
+    [self createWorkingFolders];
+    
+    // Configure window color and root controller
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+    [self.window setRootViewController:[self.flowController rootController]];
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+- (void)createWorkingFolders {
+    [NSFileManager createProfileImagesCacheFolder];
+    [NSFileManager createFilesCacheFolder];
 }
 
 @end
