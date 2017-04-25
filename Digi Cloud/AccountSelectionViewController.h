@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "AccountCollectionViewCell.h"
 
 typedef void(^Block)(void);
 
@@ -16,7 +17,7 @@ typedef void(^Block)(void);
 #define spacingHoriz    20
 #define spacingVert     20
 
-@interface AccountSelectionViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface AccountSelectionViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, copy, nullable) Block onSelect;
 @property (nonatomic) BOOL isExecuting;
@@ -31,6 +32,8 @@ typedef void(^Block)(void);
 @property (nonatomic, nullable, weak) UIButton *manageAccountsButton;
 
 - (void)configureViews;
+- (void)getPersistedUsers;
 - (void)getAccountsFromKeychain;
+- (void)switchToAccount: (NSIndexPath *_Nonnull)indexPath;
 
 @end

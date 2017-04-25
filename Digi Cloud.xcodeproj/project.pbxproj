@@ -12,6 +12,7 @@
 		83569CE11EAF199E003D0A64 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 83569CE01EAF199E003D0A64 /* User.m */; };
 		83569CE41EAF1A69003D0A64 /* Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 83569CE31EAF1A69003D0A64 /* Permissions.m */; };
 		83569CE81EAF2AD5003D0A64 /* AccountCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83569CE71EAF2AD5003D0A64 /* AccountCollectionViewCell.m */; };
+		83569CEB1EAF3C4A003D0A64 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 83569CEA1EAF3C4A003D0A64 /* Account.m */; };
 		83A734F11EADEEF400E42738 /* FlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A734F01EADEEF400E42738 /* FlowController.m */; };
 		83A734F51EADF8C100E42738 /* AccountSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A734F41EADF8C100E42738 /* AccountSelectionViewController.m */; };
 		83A734F91EAE058B00E42738 /* NSFileManager+DigiCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A734F81EAE058B00E42738 /* NSFileManager+DigiCloud.m */; };
@@ -32,6 +33,9 @@
 		83569CE31EAF1A69003D0A64 /* Permissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Permissions.m; path = Model/Permissions.m; sourceTree = "<group>"; };
 		83569CE61EAF2AD5003D0A64 /* AccountCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountCollectionViewCell.h; path = Accounts/Views/AccountCollectionViewCell.h; sourceTree = "<group>"; };
 		83569CE71EAF2AD5003D0A64 /* AccountCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountCollectionViewCell.m; path = Accounts/Views/AccountCollectionViewCell.m; sourceTree = "<group>"; };
+		83569CE91EAF3C4A003D0A64 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = Model/Account.h; sourceTree = "<group>"; };
+		83569CEA1EAF3C4A003D0A64 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = Model/Account.m; sourceTree = "<group>"; };
+		83569CEC1EAF4057003D0A64 /* Digi Cloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Digi Cloud.entitlements"; sourceTree = "<group>"; };
 		83A734F01EADEEF400E42738 /* FlowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowController.m; sourceTree = "<group>"; };
 		83A734F21EADEF0800E42738 /* FlowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowController.h; sourceTree = "<group>"; };
 		83A734F31EADF8C100E42738 /* AccountSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSelectionViewController.h; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				83569CE01EAF199E003D0A64 /* User.m */,
 				83569CE21EAF1A69003D0A64 /* Permissions.h */,
 				83569CE31EAF1A69003D0A64 /* Permissions.m */,
+				83569CE91EAF3C4A003D0A64 /* Account.h */,
+				83569CEA1EAF3C4A003D0A64 /* Account.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 		83A8E85C1EADE76700F2D121 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83569CEC1EAF4057003D0A64 /* Digi Cloud.entitlements */,
 				E58325E5C391D566D2C26F84 /* Constants.h */,
 				83A8E85D1EADE76700F2D121 /* main.m */,
 			);
@@ -178,6 +185,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = S8V3V9GFN2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -225,6 +237,7 @@
 				83A734F91EAE058B00E42738 /* NSFileManager+DigiCloud.m in Sources */,
 				832787771EAE2CD60008667F /* MainNavigationController.m in Sources */,
 				83A734F51EADF8C100E42738 /* AccountSelectionViewController.m in Sources */,
+				83569CEB1EAF3C4A003D0A64 /* Account.m in Sources */,
 				83A8E85E1EADE76700F2D121 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				CODE_SIGN_ENTITLEMENTS = "Digi Cloud/Digi Cloud.entitlements";
 				DEVELOPMENT_TEAM = S8V3V9GFN2;
 				INFOPLIST_FILE = "Digi Cloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -351,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Digi Cloud/Digi Cloud.entitlements";
 				DEVELOPMENT_TEAM = S8V3V9GFN2;
 				INFOPLIST_FILE = "Digi Cloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
