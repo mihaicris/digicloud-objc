@@ -15,8 +15,19 @@
 @implementation AccountSelectionViewController
 
 - (void)viewDidLoad {
-    self.view.backgroundColor = [UIColor greenColor];
     [super viewDidLoad];
+}
+
+
+- (void)getAccountsFromKeychain {}
+- (void)configureViews {}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return [[UICollectionViewCell alloc] init];
 }
 
 @end

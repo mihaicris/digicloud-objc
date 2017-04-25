@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		832787741EAE25300008667F /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 832787731EAE25300008667F /* AppSettings.m */; };
 		832787771EAE2CD60008667F /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832787761EAE2CD60008667F /* MainNavigationController.m */; };
+		83569CE11EAF199E003D0A64 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 83569CE01EAF199E003D0A64 /* User.m */; };
+		83569CE41EAF1A69003D0A64 /* Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 83569CE31EAF1A69003D0A64 /* Permissions.m */; };
+		83569CE81EAF2AD5003D0A64 /* AccountCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83569CE71EAF2AD5003D0A64 /* AccountCollectionViewCell.m */; };
 		83A734F11EADEEF400E42738 /* FlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A734F01EADEEF400E42738 /* FlowController.m */; };
 		83A734F51EADF8C100E42738 /* AccountSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A734F41EADF8C100E42738 /* AccountSelectionViewController.m */; };
 		83A734F91EAE058B00E42738 /* NSFileManager+DigiCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A734F81EAE058B00E42738 /* NSFileManager+DigiCloud.m */; };
@@ -19,11 +22,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		832787701EAE1D050008667F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "Digi Cloud/Constants.h"; sourceTree = "<group>"; };
 		832787721EAE25300008667F /* AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
 		832787731EAE25300008667F /* AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettings.m; sourceTree = "<group>"; };
 		832787751EAE2CD60008667F /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		832787761EAE2CD60008667F /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		83569CDF1EAF199E003D0A64 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		83569CE01EAF199E003D0A64 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		83569CE21EAF1A69003D0A64 /* Permissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Permissions.h; path = Model/Permissions.h; sourceTree = "<group>"; };
+		83569CE31EAF1A69003D0A64 /* Permissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Permissions.m; path = Model/Permissions.m; sourceTree = "<group>"; };
+		83569CE61EAF2AD5003D0A64 /* AccountCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountCollectionViewCell.h; path = Accounts/Views/AccountCollectionViewCell.h; sourceTree = "<group>"; };
+		83569CE71EAF2AD5003D0A64 /* AccountCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountCollectionViewCell.m; path = Accounts/Views/AccountCollectionViewCell.m; sourceTree = "<group>"; };
 		83A734F01EADEEF400E42738 /* FlowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowController.m; sourceTree = "<group>"; };
 		83A734F21EADEF0800E42738 /* FlowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowController.h; sourceTree = "<group>"; };
 		83A734F31EADF8C100E42738 /* AccountSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSelectionViewController.h; sourceTree = "<group>"; };
@@ -37,6 +45,7 @@
 		83A8E8681EADE76700F2D121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83A8E86B1EADE76700F2D121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83A8E86D1EADE76700F2D121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E58325E5C391D566D2C26F84 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +68,30 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		83569CDE1EAF1958003D0A64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83569CDF1EAF199E003D0A64 /* User.h */,
+				83569CE01EAF199E003D0A64 /* User.m */,
+				83569CE21EAF1A69003D0A64 /* Permissions.h */,
+				83569CE31EAF1A69003D0A64 /* Permissions.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		83569CE51EAF2A99003D0A64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83569CE61EAF2AD5003D0A64 /* AccountCollectionViewCell.h */,
+				83569CE71EAF2AD5003D0A64 /* AccountCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		83A734F61EADFA5E00E42738 /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
+				83569CE51EAF2A99003D0A64 /* Views */,
 				83A734F31EADF8C100E42738 /* AccountSelectionViewController.h */,
 				83A734F41EADF8C100E42738 /* AccountSelectionViewController.m */,
 			);
@@ -71,7 +101,6 @@
 		83A8E8501EADE76700F2D121 = {
 			isa = PBXGroup;
 			children = (
-				832787701EAE1D050008667F /* Constants.h */,
 				83A8E85B1EADE76700F2D121 /* Digi Cloud */,
 				83A8E85A1EADE76700F2D121 /* Products */,
 			);
@@ -96,6 +125,7 @@
 				83A734F01EADEEF400E42738 /* FlowController.m */,
 				832787751EAE2CD60008667F /* MainNavigationController.h */,
 				832787761EAE2CD60008667F /* MainNavigationController.m */,
+				83569CDE1EAF1958003D0A64 /* Model */,
 				832787711EAE1DBB0008667F /* Categories */,
 				83A734F61EADFA5E00E42738 /* Accounts */,
 				83A8E8681EADE76700F2D121 /* Assets.xcassets */,
@@ -109,6 +139,7 @@
 		83A8E85C1EADE76700F2D121 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E58325E5C391D566D2C26F84 /* Constants.h */,
 				83A8E85D1EADE76700F2D121 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -185,8 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83569CE11EAF199E003D0A64 /* User.m in Sources */,
 				83A734F11EADEEF400E42738 /* FlowController.m in Sources */,
 				83A8E8611EADE76700F2D121 /* AppDelegate.m in Sources */,
+				83569CE41EAF1A69003D0A64 /* Permissions.m in Sources */,
+				83569CE81EAF2AD5003D0A64 /* AccountCollectionViewCell.m in Sources */,
 				832787741EAE25300008667F /* AppSettings.m in Sources */,
 				83A734F91EAE058B00E42738 /* NSFileManager+DigiCloud.m in Sources */,
 				832787771EAE2CD60008667F /* MainNavigationController.m in Sources */,

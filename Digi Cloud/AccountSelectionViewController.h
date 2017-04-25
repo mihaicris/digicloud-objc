@@ -7,11 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 typedef void(^Block)(void);
 
-@interface AccountSelectionViewController : UIViewController
+#define cellWidth       200
+#define cellHeight      100
+#define spacingHoriz    20
+#define spacingVert     20
 
-@property (nonatomic, copy, nullable) Block onFinish;
+@interface AccountSelectionViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (nonatomic, copy, nullable) Block onSelect;
+@property (nonatomic) BOOL isExecuting;
+@property (nonatomic, nonnull) NSArray<User *> *users;
+@property (nonatomic, nullable, weak) UIActivityIndicatorView *spinner;
+@property (nonatomic, nullable, weak) UICollectionView *collectionView;
+@property (nonatomic, nullable, weak) UILabel *noAccountsLabel;
+@property (nonatomic, nullable, weak) UILabel *addAccountButton;
+@property (nonatomic, nullable, weak) UILabel *logoBigLabel;
+@property (nonatomic, nullable, weak) UIStackView *stackView;
+@property (nonatomic, nullable, weak) UIButton *loginToAnotherAccountButton;
+@property (nonatomic, nullable, weak) UIButton *manageAccountsButton;
+
+- (void)configureViews;
+- (void)getAccountsFromKeychain;
 
 @end

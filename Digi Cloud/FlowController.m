@@ -35,7 +35,7 @@
     
     AccountSelectionViewController *controller = [[AccountSelectionViewController alloc] init];
     
-    controller.onFinish = ^{
+    controller.onSelect = ^{
         __weak typeof(self) weakSelf = self;
         [[weakSelf window] setRootViewController: [weakSelf rootController]];
     };
@@ -46,7 +46,7 @@
 - (UIViewController *) createMainNavigationController {
     MainNavigationController *controller = [[MainNavigationController alloc] init];
     
-    controller.onFinish = ^{
+    controller.onLogout = ^{
         __weak typeof(self) weakSelf = self;
         [[weakSelf window] setRootViewController: [weakSelf rootController]];
     };

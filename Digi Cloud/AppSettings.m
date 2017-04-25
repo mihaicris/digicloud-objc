@@ -8,6 +8,10 @@
 
 #import "AppSettings.h"
 
+@interface AppSettings ()
+
+@end
+
 @implementation AppSettings
 
 + (BOOL)hasRunBefore {

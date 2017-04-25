@@ -12,6 +12,6 @@ typedef void(^Block)(void);
 
 @interface MainNavigationController : UINavigationController
 
-@property (nonatomic, copy, nullable) Block onFinish;
+@property (nonatomic, copy, nullable) Block onLogout;
 
 @end
